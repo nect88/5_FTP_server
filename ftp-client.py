@@ -6,7 +6,7 @@ PORT = 9049
 while True:
     sock = socket.socket()
     sock.connect((HOST, PORT))
-    print('Menu vosmojnostey:\n posmotret chto v papka - look\n sozdat papka - mkdir\n udalit papka - deldir\n udalit file - delfile\n pereimenovat file - renamefile\n skopy file s clienta na server - copycs\n            s server na client - copysc\n exit - exit')
+    print('Menu vosmojnostey:\n SMORET - look\n CREATE DIR - mkdir\n YDALIT DIR - deldir\n YDALIT FILE - delfile\n RENAME FILE - renamefile\n UPLOAD - copycs\n            DOWNLOAD - copysc\n EXIT - exit')
     request = input('myftp@shell$ ')
     sock.send(request.encode())   
     if (request == "mkdir") or (request == "deldir") or (request == "delfile"):
